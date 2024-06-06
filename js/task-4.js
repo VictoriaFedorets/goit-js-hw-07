@@ -1,5 +1,3 @@
-// Напиши скрипт управління формою логіна.
-
 const form = document.querySelector('.login-form');
 
 form.addEventListener('submit', handlerGetComment);
@@ -34,6 +32,8 @@ function handlerGetComment(evt) {
 //   console.log(objDone);
 //   form.reset();
 // }
+
+// Напиши скрипт управління формою логіна.
 
 // відправлення форми form.login-form повинна відбуватися за подією submit.
 // Під час відправлення форми сторінка не повинна перезавантажуватися.
