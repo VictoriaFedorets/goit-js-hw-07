@@ -1,16 +1,39 @@
 // Напиши скрипт управління формою логіна.
 
-// <form class="login-form">
-//   <label>
-//     Email
-//     <input type="email" name="email" />
-//   </label>
-//   <label>
-//     Password
-//     <input type="password" name="password" />
-//   </label>
-//   <button type="submit">Log in</button>
-// </form>
+const form = document.querySelector('.login-form');
+
+form.addEventListener('submit', handlerGetComment);
+
+function handlerGetComment(evt) {
+  evt.preventDefault();
+
+  // Варіант 1
+  const { email, password } = evt.currentTarget.elements;
+
+  if (email === '' || password === '') {
+    return alert('All form fields must be filled in');
+  }
+  const objDone = {
+    email: email.value.trim(),
+    password: password.value.trim(),
+  };
+  console.log(objDone);
+  form.reset();
+}
+// Варіант 2(коли обов'язково є name)
+//   const formData = new FormData(evt.currentTarget);
+//   const data = {};
+//   formData.forEach((value, key) => (data[key] = value));
+//   if (email === '' || password === '') {
+//     return alert('All form fields must be filled in');
+//   }
+//   const objDone = {
+//     email: email.value.trim(),
+//     password: password.value.trim(),
+//   };
+//   console.log(objDone);
+//   form.reset();
+// }
 
 // відправлення форми form.login-form повинна відбуватися за подією submit.
 // Під час відправлення форми сторінка не повинна перезавантажуватися.
