@@ -13,7 +13,19 @@ body {
   line-height: 1.5;
 }
 
+.item {
+  background: #f6f6fe;
+  border-radius: 8px;
+  padding: 16px;
+  width: 392px;
+  height: 264px;
+  padding: 16px;
+}
+
 .gallery {
+  padding: 0;
+  margin: 0 auto;
+  width: 1128px;
   list-style: none;
   display: flex;
   flex-wrap: wrap;
@@ -30,7 +42,7 @@ img {
 input {
   border: 1px solid #808080;
   border-radius: 4px;
-  width: 360px;
+
   height: 40px;
 
   font-family: 'Montserrat', sans-serif;
@@ -50,12 +62,15 @@ h1 {
   color: #2e2f42;
 }
 
-input {
-  border: 1px solid #808080;
-  border-radius: 8px;
-  width: 150px;
-  height: 40px;
-  background: #f6f6fe;
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+label {
+  display: flex;
+  flex-direction: column;
+  width: 360px;
 }
 
 #controls,
