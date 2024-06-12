@@ -6,14 +6,15 @@ function handlerGetComment(evt) {
   evt.preventDefault();
 
   // Варіант 1
-  const { email, password } = evt.currentTarget.elements;
+  const email = form.elements.email.value.trim();
+  const password = form.elements.password.value.trim();
 
   if (email === '' || password === '') {
-    return alert('All form fields must be filled in');
+    alert('All form fields must be filled in');
   }
   const objDone = {
-    email: email.value.trim(),
-    password: password.value.trim(),
+    email,
+    password,
   };
   console.log(objDone);
   form.reset();
